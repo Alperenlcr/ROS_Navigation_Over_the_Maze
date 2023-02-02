@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gazebo:world xmlns:gazebo="http://playerstage.sourceforge.net/gazebo/xmlschema/#gz" xmlns:model="http://playerstage.sourceforge.net/gazebo/xmlschema/#model" xmlns:body="http://playerstage.sourceforge.net/gazebo/xmlschema/#body" xmlns:geom="http://playerstage.sourceforge.net/gazebo/xmlschema/#geom" xmlns:physics="http://playerstage.sourceforge.net/gazebo/xmlschema/#physics" xmlns:rendering="http://playerstage.sourceforge.net/gazebo/xmlschema/#rendering">
+    <physics:ode>
+        <stepTime>0.001</stepTime>
+        <gravity>0 0 -9.81</gravity>
+        <cfm>10e-10</cfm>
+        <erp>0.2</erp>
+        <stepType>quick</stepType>
+        <stepIters>10</stepIters>
+        <contactMaxCorrectingVel>100.0</contactMaxCorrectingVel>
+        <contactSurfaceLayer>0.001</contactSurfaceLayer>
+        <updateRate>-0.1</updateRate>
+    </physics:ode>
+    <rendering:gui>
+        <type>flkt</type>
+        <size>800 600</size>
+        <pos>0 0</pos>
+        <frames>
+            <row height="100%">
+                <camera width="100%">
+                    <xyz>0 0 3</xyz>
+                    <rpy>0 90 90</rpy>
+                </camera>
+            </row>
+        </frames>
+    </rendering:gui>
+    <rendering:ogre>
+        <ambient>0.2 0.2 0.2 1.0</ambient>
+        <sky>
+            <material>Gazebo/CloudySky</material>
+        </sky>
+        <grid>false</grid>
+    </rendering:ogre>
+    <model:renderable name="point_white">
+        <xyz>0 0 20</xyz>
+        <rpy>0 50 50</rpy>
+        <enableGravity>false</enableGravity>
+        <light>
+            <type>directional</type>
+            <diffuseColor>0.7 0.7 0.7</diffuseColor>
+            <specularColor>0.1 0.1 0.1</specularColor>
+            <attenuation>0.2 0.1 0</attenuation>
+            <range>100.0</range>
+        </light>
+    </model:renderable>
+    <model:physical name="gplane">
+        <xyz>0 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:plane name="plane">
+            <geom:plane name="plane">
+                <laserRetro>2000.0</laserRetro>
+                <mu1>50.0</mu1>
+                <mu2>50.0</mu2>
+                <kp>1000000000.0</kp>
+                <kd>1.0</kd>
+                <normal>0 0 1</normal>
+                <size>120 120</size>
+                <segments>10 10</segments>
+                <uvTile>100 100</uvTile>
+                <material>Gazebo/GrayGrid</material>
+            </geom:plane>
+        </body:plane>
+    </model:physical>
+    <model:physical name="elevated_floor_120_1">
+        <xyz>-2.4 0 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="elevated_floor_120_1_body">
+            <geom:trimesh name="elevated_floor_120_1_geom">
+                <mesh>elevated_floor_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>elevated_floor_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="elevated_floor_120_2">
+        <xyz>-2.4 1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="elevated_floor_120_2_body">
+            <geom:trimesh name="elevated_floor_120_2_geom">
+                <mesh>elevated_floor_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>elevated_floor_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="elevated_floor_120_3">
+        <xyz>-2.4 2.4 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="elevated_floor_120_3_body">
+            <geom:trimesh name="elevated_floor_120_3_geom">
+                <mesh>elevated_floor_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>elevated_floor_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="elevated_floor_120_4">
+        <xyz>-2.4 3.6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="elevated_floor_120_4_body">
+            <geom:trimesh name="elevated_floor_120_4_geom">
+                <mesh>elevated_floor_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>elevated_floor_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="elevated_floor_120_5">
+        <xyz>-2.4 4.8 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="elevated_floor_120_5_body">
+            <geom:trimesh name="elevated_floor_120_5_geom">
+                <mesh>elevated_floor_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>elevated_floor_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="elevated_floor_120_6">
+        <xyz>-2.4 6 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="elevated_floor_120_6_body">
+            <geom:trimesh name="elevated_floor_120_6_geom">
+                <mesh>elevated_floor_120.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>elevated_floor_120.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="floor_tile_white_1">
+        <xyz>-2.4 -1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="floor_tile_white_1_body">
+            <geom:trimesh name="floor_tile_white_1_geom">
+                <mesh>floor_tile_white.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>floor_tile_white.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="floor_tile_black_2">
+        <xyz>-2.4 7.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="floor_tile_black_2_body">
+            <geom:trimesh name="floor_tile_black_2_geom">
+                <mesh>floor_tile_black.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>floor_tile_black.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="floor_tile_black_3">
+        <xyz>-2.4 1.2 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="floor_tile_black_3_body">
+            <geom:trimesh name="floor_tile_black_3_geom">
+                <mesh>floor_tile_black.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>floor_tile_black.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+    <model:physical name="floor_tile_white_2">
+        <xyz>-2.4 4.8 0</xyz>
+        <rpy>0 0 0</rpy>
+        <static>true</static>
+        <body:trimesh name="floor_tile_white_2_body">
+            <geom:trimesh name="floor_tile_white_2_geom">
+                <mesh>floor_tile_white.dae</mesh>
+                <scale>1.0 1.0 1.0</scale>
+                <genTexCoord>true</genTexCoord>
+                <visual>
+                    <scale>1.0 1.0 1.0</scale>
+                    <rpy>0 0 0</rpy>
+                    <mesh>floor_tile_white.dae</mesh>
+                </visual>
+            </geom:trimesh>
+        </body:trimesh>
+    </model:physical>
+</gazebo:world>
