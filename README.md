@@ -11,8 +11,8 @@ Threads are used to get information simultaneously from simulation and navigatio
  If the front of the robot is empty and the left turn interrupt does not come, it will go straight until the road ends. While doing that it recentering itself on the road. When the road ends or when the turn left interrupt comes, it stops and turns 90 degrees left. Then it turns right and looks for a new path. When it finds it, it continues from there. Appends the odometry to the graph at each turning point. It checks if it is in the black place during the runtime. If it passes over it, it stops itself.
 
 ### 🙌 Final Automation
-📽️refer this video for watching whole simulation on youtube.
-<a href="https://youtu.be/ioGkle-YrU8" target="_blank"><img src="![asd](https://user-images.githubusercontent.com/75525649/216351956-21b81573-825a-4177-80da-e0f9533e088a.png)" alt="Wp_6LamoRL0" width="450" height="300" border="5" /></a>
+📽️ Refer this video for watching whole simulation on
+<a href="https://youtu.be/ioGkle-YrU8" target="_blank">YouTube.</a>
 
 
 ## How to Run
